@@ -132,7 +132,7 @@
   
   <div class="header">
     <h1>Pink Glam</h1>
-    <button class="borao" on:click={() => window.location.href = 'https://eduardoc-hub.github.io/maria1'}>voltar</button>
+    <button class="borao" on:click={() => window.location.href = 'https://mariafumes.github.io/pagina1'}>voltar</button>
   </div>
   
   <div class="container">
