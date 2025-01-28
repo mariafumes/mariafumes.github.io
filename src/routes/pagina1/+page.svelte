@@ -132,7 +132,7 @@
     <header>
       <h1>Pink glam</h1>
       <nav>
-        <a href="/maria2">Sobre</a>
+        <a href="">Sobre</a>
         <a href="">19-99991122</a>
         <button class="menu-button" on:click={toggleMenu}>
           {menuOpen ? 'Fechar' : 'Menu'}
@@ -144,7 +144,7 @@
       <h2>Bem-vinda à sua nova loja favorita!</h2>
       <p>Descubra roupas incríveis para todas as ocasiões. Compre com estilo, confiança e conforto!</p>
       <div class="button-group">
-        <a href="/maria3">Ver Produtos</a>
+        <a href="">Ver Produtos</a>
       </div>
     </section>
   
