@@ -3,10 +3,10 @@
   
     // Lista de produtos com nome, preço e imagem
     let products = [
-      { id: 1, name: 'Vestido shein', price: 99.99, image: 'vestido shein.jpg' },
+      { id: 1, name: 'Vestido shein', price: 99.99, image: 'vestido shein.webp' },
       { id: 2, name: 'Blusa shein', price: 59.99, image: 'blusa shein.webp' },
-      { id: 3, name: 'Saia shein', price: 89.99, image: 'saia shein.jpg' },
-      { id: 4, name: 'Calça Jeans shein', price: 120.00, image: 'calça shein.jpg' }
+      { id: 3, name: 'Saia shein', price: 89.99, image: 'saia shein.webp' },
+      { id: 4, name: 'Calça Jeans shein', price: 120.00, image: 'calça shein.webp' }
     ];
   
     // Estado para o carrinho
@@ -127,6 +127,10 @@
   
     .clear-button:hover {
       background-color: #ff3385;
+
+      .image{
+
+      }
     }
   </style>
   <button class="borao" on:click={() => window.location.href = 'https://mariafumes.github.io/pagina1'}>voltar</button>
