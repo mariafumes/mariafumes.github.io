@@ -21,7 +21,7 @@
     rel="stylesheet"
     integrity="sha384-oTB1D2DRj/qB3UUAsb0x2Djq2v6wtAq3orFl4Bp1DxtDqktwkpPpLLUMflRRXHvH"
     crossorigin="anonymous"
-  />https
+  />
   <button class="borao" on:click={() => window.location.href = 'https://mariafumes.github.io/pagina1'}>voltar</button>
   <div class="header">
     <h1><b>Pink Glam</b></h1>
