@@ -128,7 +128,7 @@
     }
   </style>
   
-  <main>
+  <main> 
     <header>
       <h1>Pink glam</h1>
       <nav>
