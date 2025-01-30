@@ -133,7 +133,7 @@ text-overflow: clip;
     }
   }
 </style>
-<button class="borao" on:click={() => window.location.href = 'https://mariafumes.github.io/pagina1'}>voltar</button>
+<button class="borao" on:click={() => window.location.href = 'https://mariafumes.github.io'}>voltar</button>
 <div class="header">
   <h1>Pink Glam</h1>
 
