@@ -125,7 +125,7 @@
     .info-card p {
       font-size: 1rem;
       color: #fd81f3;
-    }
+    } 
   </style>
   
   <main> 
