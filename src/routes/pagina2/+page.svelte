@@ -1,6 +1,6 @@
 <script>
   import { writable } from 'svelte/store';
- import {produtos} from '$lib/compo/roupas.js'
+ import {products} from '$lib/compo/roupas.js'
  
 
   // Estado para o carrinho
