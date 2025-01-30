@@ -1,166 +1,145 @@
 <script>
-    let menuOpen = false;
-  
-    function toggleMenu() {
-      menuOpen = !menuOpen;
-    }
-  </script>
-  
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom right, #ff7eb3, #ff758c);
-      color: white;
-    }
-  
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: rgba(255, 140, 226, 0.5);
-      box-shadow: 0 4px 6px rgba(248, 0, 215, 0.2);
-    }
-  
-    header h1 {
-      text-align: center;
-      margin: 0;
-      font-size: 1.8rem;
-    }
-  
-    nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-  
-    nav a {
-      text-decoration: none;
-      color: white;
-      font-size: 1.2rem;
-      transition: color 0.3s;
-    }
-  
-    nav a:hover {
-      color: #ffb3c7;
-    }
-  
-    .menu-button {
-      background: none;
-      border: 2px solid white;
-      border-radius: 0.5rem;
-      color: white;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
-    }
-  
-    .menu-button:hover {
-      background: white;
-      color: #ff7eb3;
-    }
-  
-    .menu-button:active {
-      transform: scale(0.95);
-    }
-  
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem;
-      margin: 0 auto;
-    }
-  
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-  
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-  
-    .button-group {
-      margin-top: 2rem;
-    }
-  
-    .button-group a {
-      text-decoration: none;
-      display: inline-block;
-      background-color: #ffb3c7;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 1rem;
-      font-size: 1.1rem;
-      margin: 0 0.5rem;
-      transition: background 0.3s;
-    }
-  
-    .button-group a:hover {
-      background-color: #ff758c;
-    }
-  
-    .info-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-    }
-  
-    .info-card {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 1rem; 
-      padding: 1.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      text-align: center;
-    }
-  
-    .info-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-  
-    .info-card p {
-      font-size: 1rem;
-      color: #fd81f3;
-    } 
-  </style>
-  
-  <main> 
-    <header>
-      <h1>Pink glam</h1>
-      <nav>
-        <a href="/pagina2">Sobre</a>
-        <a href="">19-99991122</a>
-        <button class="menu-button" on:click={toggleMenu}>
-          {menuOpen ? 'Fechar' : 'Menu'}
-        </button>
-      </nav>
-    </header>
-  
-    <section class="hero">
-      <h2>Bem-vinda à sua nova loja favorita!</h2>
-      <p>Descubra roupas incríveis para todas as ocasiões. Compre com estilo, confiança e conforto!</p>
-      <div class="button-group">
-        <a href="/pagina3">Ver Produtos</a>
-      </div>
-    </section>
-  
-    <section class="info-section">
-      <div class="info-card">
-        <h3>Moda Exclusiva</h3>
-        <p><b>Peças únicas e exclusivas que refletem sua personalidade.</b></p>
-      </div>
-      <div class="info-card">
-        <h3>Conforto Garantido</h3>
-        <p><b>Roupas feitas com materiais de alta qualidade para o seu conforto.</b></p>
-      </div>
-      <div class="info-card">
-        <h3>Atendimento Premium</h3>
-        <p><b>Uma experiência de compra personalizada e inesquecível.</b></p>
-      </div>
-    </section>
-  </main>
-  
+  let greetingMessage = '';
+  let promoMessage = '';
+  let showCatalog = false;
+
+  function showGreeting() {
+    greetingMessage = 'Obrigado por visitar nossa loja! Estamos ansiosos para ajudá-la a encontrar o look perfeito.';
+  }
+
+  function showPromo() {
+    promoMessage = 'Aproveite 20% de desconto em todas as peças da coleção de verão! Use o código VERÃO20.';
+  }
+
+  function toggleCatalog() {
+    showCatalog = !showCatalog;
+  }
+</script>
+
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-oTB1D2DRj/qB3UUAsb0x2Djq2v6wtAq3orFl4Bp1DxtDqktwkpPpLLUMflRRXHvH"
+  crossorigin="anonymous"
+/>
+<button class="borao" on:click={() => window.location.href = 'https://mariafumes.github.io/pagina1'}>voltar</button>
+<div class="header">
+  <h1><b>Pink Glam</b></h1>
+  <p>Onde a elegância se encontra com o estilo.</p>
+</div>
+
+<div class="container content-section">
+  <h2>Sobre a <b>Pink Glam</b></h2>
+  <p>Localizada no coração da cidade, a Pink Glam oferece um portfólio incrível de roupas femininas que refletem o estilo, a sofisticação e a ousadia de cada mulher. Desde looks casuais até vestidos de festa, temos a peça perfeita para cada ocasião.</p>
+  <p>Com uma equipe especializada e sempre atenta às últimas tendências da moda, garantimos que você saia da nossa loja com uma peça que combine perfeitamente com o seu estilo e personalidade.</p>
+</div>
+
+<div class="container content-section">
+  <h2>Visite-nos</h2>
+  <p>Estamos localizados na Rua das Flores, nº 123, no coração da cidade. Nossa loja é de fácil acesso e está pronta para receber você.</p>
+  <p>Se você procura exclusividade, conforto e um atendimento impecável, venha nos visitar e vivencie a experiência de estar em um verdadeiro showroom de roupas.</p>
+</div>
+
+<!-- Botões interativos -->
+<div class="container text-center">
+  <button class="btn btn-primary mt-3" on:click={toggleCatalog}>Ver nosso catálogo</button>
+  {#if showCatalog}
+    <p class="mt-3">Explore as últimas coleções de roupas da Pink Glam e escolha o seu próximo look favorito!</p>
+  {/if}
+
+  <button class="btn btn-success mt-3" on:click={showPromo}>Ver Promoção</button>
+  {#if promoMessage}
+    <p class="mt-3 text-warning">{promoMessage}</p>
+  {/if}
+</div>
+<div class="footer">
+  <p>&copy; 2025 Pink Glam. Todos os direitos reservados.</p>
+  <p>Siga-nos no Instagram @pinkglam_oficial</p>
+</div>
+
+<style>
+  body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .header {
+    background-color: #f8a7cf;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .content-section {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+
+  .content-section h2 {
+    color: hsl(330, 86%, 80%);
+  }
+
+  .content-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .btn-primary {
+    background-color: #ffa8d4;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .btn-primary:hover {
+    background-color: #fdb5d2;
+  }
+
+  .btn-success {
+    background-color: #28a745;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .btn-success:hover {
+    background-color: #218838;
+  }
+
+  .btn-info {
+    background-color: #17a2b8;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .btn-info:hover {
+    background-color: #138496;
+  }
+
+  .footer {
+    background-color: #ff66b2;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 225px;
+  }
+
+  .footer p {
+    font-size: 14px;
+    color: #ccc;
+  }
+  .borao{
+position: absolute;
+top:0;
+text-overflow: clip;
+  }
+</style>
